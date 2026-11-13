@@ -6,9 +6,6 @@ updates:
     schedule:
       interval: "daily"
     target-branch: "main"
-    # Disable normal dependency upgrade PRs.
-    # Security PRs can still be generated.
-    open-pull-requests-limit: 0
     pull-request-branch-name:
       prefix: "feature/github-actions_dependabot"
       separator: "_"
