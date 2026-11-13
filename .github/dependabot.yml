@@ -41,7 +41,7 @@ updates:
     directory: "/ruby"
     schedule:
       interval: "daily"
-        target-branch: "main"
+    target-branch: "main"
     # Disable normal dependency upgrade PRs.
     # Security PRs can still be generated.
     open-pull-requests-limit: 0
