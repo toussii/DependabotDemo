@@ -4,12 +4,54 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "daily"
+    target-branch: "main"
+    # Disable normal dependency upgrade PRs.
+    # Security PRs can still be generated.
+    open-pull-requests-limit: 0
+    pull-request-branch-name:
+      prefix: "feature/github-actions_dependabot"
+      separator: "_"
+      word-separator: "-"
+      branch-name-case: "lowercase"
+    labels:
+      - "dependencies"
+      - "security"
+      - "dependabot"
+      - "github-actions"
   - package-ecosystem: npm
     directory: "/javascript"
     schedule:
-      interval: "weekly"
+      interval: "daily"
+    target-branch: "main"
+    # Disable normal dependency upgrade PRs.
+    # Security PRs can still be generated.
+    open-pull-requests-limit: 0
+    pull-request-branch-name:
+      prefix: "feature/1234_dependabot"
+      separator: "_"
+      word-separator: "-"
+      branch-name-case: "lowercase"
+    labels:
+      - "dependencies"
+      - "security"
+      - "dependabot"
+      - "npm"
   - package-ecosystem: bundler
     directory: "/ruby"
     schedule:
-      interval: "weekly"
+      interval: "daily"
+        target-branch: "main"
+    # Disable normal dependency upgrade PRs.
+    # Security PRs can still be generated.
+    open-pull-requests-limit: 0
+    pull-request-branch-name:
+      prefix: "feature/5678_dependabot"
+      separator: "_"
+      word-separator: "-"
+      branch-name-case: "lowercase"
+    labels:
+      - "dependencies"
+      - "security"
+      - "dependabot"
+      - "github-actions"
