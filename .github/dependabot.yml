@@ -7,7 +7,7 @@ updates:
       interval: "daily"
     pull-request-branch-name:
       prefix: "feature/5678_dependabot"
-      separator: "_"
+      template: "{prefix}_{package_manager}-{name}"
       word-separator: "-"
       branch-name-case: "lowercase"
     labels:
@@ -22,7 +22,7 @@ updates:
     target-branch: "main"
     pull-request-branch-name:
       prefix: "feature/1234_dependabot"
-      separator: "_"
+      template: "{prefix}_{package_manager}-{name}"
       word-separator: "-"
       branch-name-case: "lowercase"
     labels:
@@ -37,7 +37,7 @@ updates:
     target-branch: "main"
     pull-request-branch-name:
       prefix: "feature/5678_dependabot"
-      separator: "_"
+      template: "{prefix}_{package_manager}-{name}"
       word-separator: "-"
       branch-name-case: "lowercase"
     labels:
