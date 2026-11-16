@@ -5,6 +5,16 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    pull-request-branch-name:
+      prefix: "feature/5678_dependabot"
+      separator: "_"
+      word-separator: "-"
+      branch-name-case: "lowercase"
+    labels:
+      - "dependencies"
+      - "security"
+      - "dependabot"
+      - "github-actions"
   - package-ecosystem: npm
     directory: "/javascript"
     schedule:
@@ -12,6 +22,14 @@ updates:
     target-branch: "main"
     pull-request-branch-name:
       prefix: "feature/1234_dependabot"
+      separator: "_"
+      word-separator: "-"
+      branch-name-case: "lowercase"
+    labels:
+      - "dependencies"
+      - "security"
+      - "dependabot"
+      - "github-actions"
   - package-ecosystem: bundler
     directory: "/ruby"
     schedule:
