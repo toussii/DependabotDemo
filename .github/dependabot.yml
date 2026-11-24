@@ -91,7 +91,7 @@ updates:
       - "dependabot"
       - "github-actions"
   - package-ecosystem: maven
-    directory: "/maven"
+    directory: "/maven/demo"
     schedule:
       interval: 'daily'
       time: '02:00'
