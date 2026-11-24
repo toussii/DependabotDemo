@@ -23,7 +23,7 @@ updates:
     pull-request-branch-name:
       prefix: "feature/5678_dependabot"
       template: "{prefix}_{package_manager}-{name}"
-      word-separator: "-"
+      word-separator: "_"
       branch-name-case: "lowercase"
     labels:
       - "dependencies"
@@ -53,7 +53,7 @@ updates:
     pull-request-branch-name:
       prefix: "feature/1234_dependabot"
       template: "{prefix}_{package_manager}-{name}"
-      word-separator: "-"
+      word-separator: "_"
       branch-name-case: "lowercase"
     labels:
       - "dependencies"
@@ -83,7 +83,37 @@ updates:
     pull-request-branch-name:
       prefix: "feature/5678_dependabot"
       template: "{prefix}_{package_manager}-{name}"
-      word-separator: "-"
+      word-separator: "_"
+      branch-name-case: "lowercase"
+    labels:
+      - "dependencies"
+      - "security"
+      - "dependabot"
+      - "github-actions"
+  - package-ecosystem: maven
+    directory: "/maven"
+    schedule:
+      interval: 'daily'
+      time: '02:00'
+      timezone: 'Europe/Amsterdam'
+    commit-message:
+      # Prefix all commit messages with "dependabot: "
+      prefix: 'dependabot'
+    groups:
+      major:
+        update-types:
+          - 'major'
+      non-major:
+        update-types:
+          - 'minor'
+          - 'patch'
+    target-branch: "main"
+    # Allow up to 2 open pull requests
+    open-pull-requests-limit: 2
+    pull-request-branch-name:
+      prefix: "feature/1111_dependabot"
+      template: "{prefix}_{package_manager}-{name}"
+      word-separator: "_"
       branch-name-case: "lowercase"
     labels:
       - "dependencies"
